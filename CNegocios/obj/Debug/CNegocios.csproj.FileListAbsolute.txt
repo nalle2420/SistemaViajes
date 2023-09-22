@@ -1,0 +1,11 @@
+C:\Users\nalle\source\repos\SistemaViajes\CNegocios\bin\Debug\CNegocios.dll
+C:\Users\nalle\source\repos\SistemaViajes\CNegocios\bin\Debug\CNegocios.pdb
+C:\Users\nalle\source\repos\SistemaViajes\CNegocios\bin\Debug\CDatos.dll
+C:\Users\nalle\source\repos\SistemaViajes\CNegocios\bin\Debug\CEntidades.dll
+C:\Users\nalle\source\repos\SistemaViajes\CNegocios\bin\Debug\CDatos.pdb
+C:\Users\nalle\source\repos\SistemaViajes\CNegocios\bin\Debug\CEntidades.pdb
+C:\Users\nalle\source\repos\SistemaViajes\CNegocios\obj\Debug\CNegocios.csproj.AssemblyReference.cache
+C:\Users\nalle\source\repos\SistemaViajes\CNegocios\obj\Debug\CNegocios.csproj.CoreCompileInputs.cache
+C:\Users\nalle\source\repos\SistemaViajes\CNegocios\obj\Debug\CNegocios.csproj.CopyComplete
+C:\Users\nalle\source\repos\SistemaViajes\CNegocios\obj\Debug\CNegocios.dll
+C:\Users\nalle\source\repos\SistemaViajes\CNegocios\obj\Debug\CNegocios.pdb

@@ -1,0 +1,6 @@
+C:\Users\nalle\source\repos\SistemaViajes\CDatos\bin\Debug\CDatos.dll
+C:\Users\nalle\source\repos\SistemaViajes\CDatos\bin\Debug\CDatos.pdb
+C:\Users\nalle\source\repos\SistemaViajes\CDatos\obj\Debug\CDatos.csproj.AssemblyReference.cache
+C:\Users\nalle\source\repos\SistemaViajes\CDatos\obj\Debug\CDatos.csproj.CoreCompileInputs.cache
+C:\Users\nalle\source\repos\SistemaViajes\CDatos\obj\Debug\CDatos.dll
+C:\Users\nalle\source\repos\SistemaViajes\CDatos\obj\Debug\CDatos.pdb

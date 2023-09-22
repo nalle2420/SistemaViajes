@@ -1,0 +1,6 @@
+C:\Users\nalle\source\repos\SistemaViajes\CEntidades\bin\Debug\CEntidades.dll
+C:\Users\nalle\source\repos\SistemaViajes\CEntidades\bin\Debug\CEntidades.pdb
+C:\Users\nalle\source\repos\SistemaViajes\CEntidades\obj\Debug\CEntidades.csproj.AssemblyReference.cache
+C:\Users\nalle\source\repos\SistemaViajes\CEntidades\obj\Debug\CEntidades.csproj.CoreCompileInputs.cache
+C:\Users\nalle\source\repos\SistemaViajes\CEntidades\obj\Debug\CEntidades.dll
+C:\Users\nalle\source\repos\SistemaViajes\CEntidades\obj\Debug\CEntidades.pdb
