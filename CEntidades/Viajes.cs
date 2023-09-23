@@ -14,6 +14,7 @@ namespace CEntidades
         public DateTime Viaje_Fecha { get; set; }
         public Transportistas oTransportista { get; set; }
 
+        public List<Viaje_Detalles> oViajeDetalle { get; set; }
         public int Viaje_Total { get; set; }
     }
 }

@@ -9,7 +9,6 @@ namespace CEntidades
     public class Viaje_Detalles
     {
         public int VD_ID { get; set; }
-        public Viajes oViaje { get; set; }
         public Empleados oEmpleado { get; set; }
         public int Distancia_KM { get; set; }
     }
