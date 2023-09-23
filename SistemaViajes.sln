@@ -9,7 +9,7 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "2_Negocios", "2_Negocios", 
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "3_Presentacion", "3_Presentacion", "{2E3AEF51-C78F-4DC6-B9F0-048DBA78B517}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ProyectoViajes", "ProyectoViajes\ProyectoViajes.csproj", "{A0CFC7A8-2C08-4775-8FC7-CCFC386B0783}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CPresentacion", "ProyectoViajes\CPresentacion.csproj", "{A0CFC7A8-2C08-4775-8FC7-CCFC386B0783}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "4_Entidades", "4_Entidades", "{1789C7CA-1343-4664-AF77-54FE3A1C1D05}"
 EndProject
@@ -44,12 +44,6 @@ Global
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
-	EndGlobalSection
-	GlobalSection(NestedProjects) = preSolution
-		{A0CFC7A8-2C08-4775-8FC7-CCFC386B0783} = {2E3AEF51-C78F-4DC6-B9F0-048DBA78B517}
-		{DC49DB10-4966-4A3D-8DF1-C9D9A7CD5032} = {4E701879-EE81-4099-B6D7-ED221CF260A5}
-		{C0F9173D-207B-4164-8F30-CB4B423668B9} = {F35DBEC9-A626-4738-BBC3-974F52B135E0}
-		{2B5C19AD-0A0B-438F-A427-ED9C2B9A49F2} = {1789C7CA-1343-4664-AF77-54FE3A1C1D05}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {A02B4AE4-8799-4110-93B9-F649D9044C02}
