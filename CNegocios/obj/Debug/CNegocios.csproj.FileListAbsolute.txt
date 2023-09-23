@@ -9,3 +9,4 @@ C:\Users\nalle\source\repos\SistemaViajes\CNegocios\obj\Debug\CNegocios.csproj.C
 C:\Users\nalle\source\repos\SistemaViajes\CNegocios\obj\Debug\CNegocios.csproj.CopyComplete
 C:\Users\nalle\source\repos\SistemaViajes\CNegocios\obj\Debug\CNegocios.dll
 C:\Users\nalle\source\repos\SistemaViajes\CNegocios\obj\Debug\CNegocios.pdb
+C:\Users\nalle\source\repos\SistemaViajes\CNegocios\bin\Debug\CDatos.dll.config

@@ -176,7 +176,8 @@
             this.Controls.Add(this.MenuTitulo);
             this.MainMenuStrip = this.menuNav;
             this.Name = "FrmInicio";
-            this.Text = "FrmLogin";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
+            this.Text = "FrmInicio";
             this.menuNav.ResumeLayout(false);
             this.menuNav.PerformLayout();
             this.ResumeLayout(false);
