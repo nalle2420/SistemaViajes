@@ -45,6 +45,7 @@
     <Compile Include="CDEmpleados.cs" />
     <Compile Include="CDUsuarios.cs" />
     <Compile Include="Conexion.cs" />
+    <Compile Include="CDPermisos.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Properties\Settings.Designer.cs">
       <AutoGen>True</AutoGen>

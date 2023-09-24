@@ -12,6 +12,8 @@ namespace CEntidades
 
         public Puesto oPuesto { get; set; }
 
+       
+
         public string NombreMenu { get; set; }
 
     }

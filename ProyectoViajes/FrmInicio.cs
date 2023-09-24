@@ -10,6 +10,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using CNegocios;
 using CEntidades;
+using FontAwesome.Sharp;
 
 namespace ProyectoViajes
 {
@@ -18,6 +19,8 @@ namespace ProyectoViajes
         private static Usuarios usuarioActual;
         private static Empleados EmpleadoActual = new Empleados();
         CNEmpleados cEmp = new CNEmpleados();
+        private static IconMenuItem MenuActual = null;
+        private static Form FrmActivo = null;
         
        
        
@@ -40,7 +43,7 @@ namespace ProyectoViajes
 
         private void MenuReporta_Click(object sender, EventArgs e)
         {
-
+            AbrirFormulario(MenuReporte, new FrmReportes());
         }
 
         private void label2_Click(object sender, EventArgs e)
@@ -53,6 +56,17 @@ namespace ProyectoViajes
             
             try
             {
+                List<Permiso> ListaPermisos = new CNPermiso().PermisoPermisosPorEmpleado(usuarioActual.Emp_ID);
+
+                foreach(IconMenuItem iconmenu in menuNav.Items)
+                {
+                    bool encontrado = ListaPermisos.Any(m => m.NombreMenu == iconmenu.Name);
+
+                    if(encontrado == false)
+                    {
+                        iconmenu.Visible = false;
+                    }
+                }
                 EmpleadoActual = cEmp.BuscarEmpleado(usuarioActual.Emp_ID);
                 lblNombre.Text = EmpleadoActual.Emp_Nombre + " " + EmpleadoActual.Emp_Apellido;
 
@@ -66,6 +80,47 @@ namespace ProyectoViajes
 
            
 
+
+        }
+
+        private void AbrirFormulario(IconMenuItem menu, Form formulario)
+        {
+            if(MenuActual != null)
+            {
+                MenuActual.BackColor = Color.White;
+            }
+            menu.BackColor = Color.Silver;
+            MenuActual = menu;
+
+            if(FrmActivo != null)
+            {
+                FrmActivo.Close();
+
+            }
+
+            FrmActivo = formulario;
+            formulario.TopLevel = false;
+            formulario.FormBorderStyle = FormBorderStyle.None;
+            formulario.Dock = DockStyle.Fill;
+            formulario.BackColor = Color.SteelBlue;
+            Contenedor.Controls.Add(formulario);
+            formulario.Show();
+
+
+        }
+
+        private void MenuAdmin_Click(object sender, EventArgs e)
+        {
+            AbrirFormulario((IconMenuItem)sender, new FrmAdminSucursal());
+        }
+
+        private void MenuRegistro_Click(object sender, EventArgs e)
+        {
+            AbrirFormulario(MenuRegistro, new FrmRegistroViajes());
+        }
+
+        private void Contenedor_Paint(object sender, PaintEventArgs e)
+        {
 
         }
     }
