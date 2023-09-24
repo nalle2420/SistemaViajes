@@ -17,5 +17,12 @@ namespace CNegocios
             return objEmpleado.BuscarEmpleado(id);
 
         }
+        public List<Empleados> Listar()
+        {
+            
+            return objEmpleado.Listar();
+        }
+
+        
     }
 }

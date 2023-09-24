@@ -21,7 +21,7 @@ namespace CDatos
             conec.OpenConnection();
             try
             {
-                SqlCommand command = new SqlCommand("MostrarPacientes", conec.sqlConnection);
+                SqlCommand command = new SqlCommand("MostrarUsuario", conec.sqlConnection);
                 command.CommandType = CommandType.StoredProcedure;
                 using (SqlDataReader reader = command.ExecuteReader())
                 {

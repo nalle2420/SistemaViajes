@@ -40,10 +40,10 @@
             this.btnEditar = new FontAwesome.Sharp.IconButton();
             this.btnEliminar = new FontAwesome.Sharp.IconButton();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.label5 = new System.Windows.Forms.Label();
             this.Emp_ID = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Sucursal = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Distancia_KM = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.label5 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -204,18 +204,6 @@
             this.dataGridView1.TabIndex = 12;
             this.dataGridView1.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
             // 
-            // label5
-            // 
-            this.label5.BackColor = System.Drawing.Color.SteelBlue;
-            this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.label5.Location = new System.Drawing.Point(324, 52);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(452, 25);
-            this.label5.TabIndex = 13;
-            this.label5.Text = "Sucursales asignadas :";
-            this.label5.Click += new System.EventHandler(this.label5_Click);
-            // 
             // Emp_ID
             // 
             this.Emp_ID.HeaderText = "ID Empleado";
@@ -236,6 +224,18 @@
             this.Distancia_KM.MinimumWidth = 6;
             this.Distancia_KM.Name = "Distancia_KM";
             this.Distancia_KM.Width = 150;
+            // 
+            // label5
+            // 
+            this.label5.BackColor = System.Drawing.Color.SteelBlue;
+            this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label5.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.label5.Location = new System.Drawing.Point(324, 52);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(452, 25);
+            this.label5.TabIndex = 13;
+            this.label5.Text = "Sucursales asignadas :";
+            this.label5.Click += new System.EventHandler(this.label5_Click);
             // 
             // FrmAdminSucursal
             // 
@@ -258,6 +258,7 @@
             this.Controls.Add(this.label1);
             this.Name = "FrmAdminSucursal";
             this.Text = "FrmAdminSucursal";
+            this.Load += new System.EventHandler(this.FrmAdminSucursal_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();

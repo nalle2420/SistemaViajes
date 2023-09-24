@@ -16,6 +16,8 @@ namespace CEntidades
 
         public string Emp_Apellido { get; set; }
 
+        public string Emp_NomCompleto { get; set; }
+
         public string Emp_Direccion { get; set; }
 
         public string Emp_Telefono { get; set; }
@@ -23,5 +25,7 @@ namespace CEntidades
         public Puesto oPuesto { get; set; }
 
         public bool Emp_transporte { get; set; }
+
+        
     }
 }

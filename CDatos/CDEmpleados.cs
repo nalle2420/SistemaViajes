@@ -46,5 +46,46 @@ namespace CDatos
             }
             return emp;
         }
+
+
+        public List<Empleados> Listar()
+        {
+            List<Empleados> lista = new List<Empleados>();
+
+            conec.OpenConnection();
+            try
+            {
+                SqlCommand command = new SqlCommand("ObtenerEmpleadosConTransporte", conec.sqlConnection);
+                command.CommandType = CommandType.StoredProcedure;
+                using (SqlDataReader reader = command.ExecuteReader())
+                {
+                    while (reader.Read())
+                    {
+                        lista.Add(new Empleados()
+                        {
+                            Emp_ID = Convert.ToInt32(reader["Emp_ID"]),
+                            Emp_Nombre = Convert.ToString(reader["Emp_Nombre"]),
+                            Emp_Apellido = Convert.ToString(reader["Emp_Apellido"]),
+                           
+                    });
+
+                    }
+                }
+                foreach (Empleados empleados in lista)
+                {
+                    empleados.Emp_NomCompleto = empleados.Emp_Nombre + " " + empleados.Emp_Apellido;
+                }
+            }
+            catch (Exception ex)
+            {
+                lista = new List<Empleados>();
+            }
+            finally
+            {
+                conec.CloseConnection();
+            }
+            return lista;
+        }
+
     }
 }
