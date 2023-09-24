@@ -38,6 +38,8 @@
             this.MenuTitulo = new System.Windows.Forms.MenuStrip();
             this.label1 = new System.Windows.Forms.Label();
             this.Contenedor = new System.Windows.Forms.Panel();
+            this.label2 = new System.Windows.Forms.Label();
+            this.lblNombre = new System.Windows.Forms.Label();
             this.menuNav.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -165,11 +167,38 @@
             this.Contenedor.Size = new System.Drawing.Size(938, 398);
             this.Contenedor.TabIndex = 3;
             // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.BackColor = System.Drawing.Color.SteelBlue;
+            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.ForeColor = System.Drawing.Color.AliceBlue;
+            this.label2.Location = new System.Drawing.Point(753, 9);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(101, 20);
+            this.label2.TabIndex = 4;
+            this.label2.Text = "Bienvenido";
+            this.label2.Click += new System.EventHandler(this.label2_Click);
+            // 
+            // lblNombre
+            // 
+            this.lblNombre.AutoSize = true;
+            this.lblNombre.BackColor = System.Drawing.Color.SteelBlue;
+            this.lblNombre.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblNombre.ForeColor = System.Drawing.Color.AliceBlue;
+            this.lblNombre.Location = new System.Drawing.Point(753, 29);
+            this.lblNombre.Name = "lblNombre";
+            this.lblNombre.Size = new System.Drawing.Size(106, 25);
+            this.lblNombre.TabIndex = 5;
+            this.lblNombre.Text = "lblNombre";
+            // 
             // FrmInicio
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(938, 520);
+            this.Controls.Add(this.lblNombre);
+            this.Controls.Add(this.label2);
             this.Controls.Add(this.Contenedor);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.menuNav);
@@ -178,6 +207,7 @@
             this.Name = "FrmInicio";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "FrmInicio";
+            this.Load += new System.EventHandler(this.FrmInicio_Load);
             this.menuNav.ResumeLayout(false);
             this.menuNav.PerformLayout();
             this.ResumeLayout(false);
@@ -197,5 +227,7 @@
         private FontAwesome.Sharp.IconMenuItem MenuTransportista;
         private FontAwesome.Sharp.IconMenuItem MenuReporte;
         private System.Windows.Forms.Panel Contenedor;
+        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Label lblNombre;
     }
 }

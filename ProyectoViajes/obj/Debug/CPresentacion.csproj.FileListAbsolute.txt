@@ -16,3 +16,6 @@ C:\Users\nalle\source\repos\SistemaViajes\ProyectoViajes\obj\Debug\CPresentacion
 C:\Users\nalle\source\repos\SistemaViajes\ProyectoViajes\obj\Debug\ProyectoViajes.exe
 C:\Users\nalle\source\repos\SistemaViajes\ProyectoViajes\obj\Debug\ProyectoViajes.pdb
 C:\Users\nalle\source\repos\SistemaViajes\ProyectoViajes\obj\Debug\ProyectoViajes.FrmLogin.resources
+C:\Users\nalle\source\repos\SistemaViajes\ProyectoViajes\bin\Debug\CDatos.dll
+C:\Users\nalle\source\repos\SistemaViajes\ProyectoViajes\bin\Debug\CDatos.pdb
+C:\Users\nalle\source\repos\SistemaViajes\ProyectoViajes\bin\Debug\CDatos.dll.config

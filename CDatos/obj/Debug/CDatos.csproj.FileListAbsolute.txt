@@ -5,3 +5,6 @@ C:\Users\nalle\source\repos\SistemaViajes\CDatos\obj\Debug\CDatos.csproj.CoreCom
 C:\Users\nalle\source\repos\SistemaViajes\CDatos\obj\Debug\CDatos.dll
 C:\Users\nalle\source\repos\SistemaViajes\CDatos\obj\Debug\CDatos.pdb
 C:\Users\nalle\source\repos\SistemaViajes\CDatos\bin\Debug\CDatos.dll.config
+C:\Users\nalle\source\repos\SistemaViajes\CDatos\bin\Debug\CEntidades.dll
+C:\Users\nalle\source\repos\SistemaViajes\CDatos\bin\Debug\CEntidades.pdb
+C:\Users\nalle\source\repos\SistemaViajes\CDatos\obj\Debug\CDatos.csproj.CopyComplete

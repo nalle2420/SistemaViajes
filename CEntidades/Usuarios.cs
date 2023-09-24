@@ -12,6 +12,8 @@ namespace CEntidades
         public string Usuario { get; set;}
         public string Usu_clave { get; set;}
         public Empleados oEmpleado { get; set;}
+
+        public int Emp_ID { get; set; }
         public bool Usu_activo { get; set;}
     
     }

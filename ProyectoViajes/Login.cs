@@ -7,6 +7,8 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using CNegocios;
+using CEntidades;
 
 namespace ProyectoViajes
 {
@@ -29,11 +31,50 @@ namespace ProyectoViajes
 
         private void btnIngresar_Click(object sender, EventArgs e)
         {
-            FrmInicio frmInicio = new FrmInicio();
-            frmInicio.Show();
-            this.Hide();
+            try
+            {
+                //buscar usuario
+                Usuarios oUsuario = new Usuarios();
+                CNUsuarios cUsuario = new CNUsuarios();
+                oUsuario = cUsuario.BuscarUsuario(txtUsuario.Text);
+       
 
-            frmInicio.FormClosing += frm_closing;
+
+
+                //Verificar si el usuario existe
+                if (oUsuario == null)
+                {
+                    MessageBox.Show("El usuario o contraseña es incorrecto");
+                }
+                else
+                {
+                    if ((oUsuario.Usu_clave == txtContra.Text) && (oUsuario.Usu_activo == true))
+                    {
+                        
+                        FrmInicio frmInicio = new FrmInicio(oUsuario);
+                        frmInicio.Show();
+                        this.Hide();
+                        frmInicio.FormClosing += frm_closing;
+                    }
+                    else if ((oUsuario.Usu_activo == false)&&(oUsuario.Usuario == txtUsuario.Text))
+                    {
+                        MessageBox.Show("Su usuario se encuentra deshabilitado, por favor comunicarse con soporte técnico ");
+                    }
+                    else
+                    {
+                        MessageBox.Show("El usuario o contraseña es incorrecto");
+                    }
+                }
+
+            }
+            catch (Exception ex)
+            {
+
+                MessageBox.Show("Ocurrio un error al momento de realizar la consulta");
+                Console.WriteLine(ex.Message);
+            }
+
+            
         }
 
         private void frm_closing(object sender, FormClosingEventArgs e)
@@ -42,6 +83,11 @@ namespace ProyectoViajes
             txtContra.Text = "";
             this.Show();
 
-        }   
+        }
+
+        private void label1_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
