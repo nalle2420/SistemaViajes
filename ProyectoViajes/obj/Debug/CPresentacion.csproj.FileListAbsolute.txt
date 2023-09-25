@@ -21,3 +21,4 @@ C:\Users\nalle\source\repos\SistemaViajes\ProyectoViajes\bin\Debug\CDatos.pdb
 C:\Users\nalle\source\repos\SistemaViajes\ProyectoViajes\bin\Debug\CDatos.dll.config
 C:\Users\nalle\source\repos\SistemaViajes\ProyectoViajes\obj\Debug\ProyectoViajes.FrmAdminSucursal.resources
 C:\Users\nalle\source\repos\SistemaViajes\ProyectoViajes\obj\Debug\ProyectoViajes.FrmRegistroViajes.resources
+C:\Users\nalle\source\repos\SistemaViajes\ProyectoViajes\obj\Debug\ProyectoViajes.FrmReportes.resources

@@ -44,6 +44,7 @@
   <ItemGroup>
     <Compile Include="CDDetalleEnvio.cs" />
     <Compile Include="CDEmpleados.cs" />
+    <Compile Include="CDReporte.cs" />
     <Compile Include="CDSucursales.cs" />
     <Compile Include="CDSucursalxEmpleado.cs" />
     <Compile Include="CDTransportista.cs" />

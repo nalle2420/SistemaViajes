@@ -44,6 +44,7 @@
     <Compile Include="CNDetalleViaje.cs" />
     <Compile Include="CNEmpleados.cs" />
     <Compile Include="CNPermiso.cs" />
+    <Compile Include="CNReporte.cs" />
     <Compile Include="CNSucursal.cs" />
     <Compile Include="CNSucursalxEmpleado.cs" />
     <Compile Include="CNTransportista.cs" />
