@@ -31,11 +31,11 @@
             this.label5 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.dtpFecha1 = new System.Windows.Forms.DateTimePicker();
-            this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
+            this.dtpFecha2 = new System.Windows.Forms.DateTimePicker();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.cmbTransportista = new System.Windows.Forms.ComboBox();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.dgvPago = new System.Windows.Forms.DataGridView();
             this.Viaje_ID = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.NombreCompleto = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.NombreSucursal = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -43,8 +43,9 @@
             this.ViajeTotal = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.TotalCalculado = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.label10 = new System.Windows.Forms.Label();
-            this.txtRegistrador = new System.Windows.Forms.TextBox();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            this.txtmonto = new System.Windows.Forms.TextBox();
+            this.btnBuscar = new FontAwesome.Sharp.IconButton();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvPago)).BeginInit();
             this.SuspendLayout();
             // 
             // label5
@@ -72,7 +73,7 @@
             // 
             // dtpFecha1
             // 
-            this.dtpFecha1.Location = new System.Drawing.Point(107, 69);
+            this.dtpFecha1.Location = new System.Drawing.Point(107, 71);
             this.dtpFecha1.MaxDate = new System.DateTime(2025, 12, 31, 0, 0, 0, 0);
             this.dtpFecha1.MinDate = new System.DateTime(2010, 1, 1, 0, 0, 0, 0);
             this.dtpFecha1.Name = "dtpFecha1";
@@ -80,22 +81,22 @@
             this.dtpFecha1.TabIndex = 20;
             this.dtpFecha1.Value = new System.DateTime(2023, 9, 25, 0, 0, 0, 0);
             // 
-            // dateTimePicker1
+            // dtpFecha2
             // 
-            this.dateTimePicker1.Location = new System.Drawing.Point(377, 68);
-            this.dateTimePicker1.MaxDate = new System.DateTime(2025, 12, 31, 0, 0, 0, 0);
-            this.dateTimePicker1.MinDate = new System.DateTime(2010, 1, 1, 0, 0, 0, 0);
-            this.dateTimePicker1.Name = "dateTimePicker1";
-            this.dateTimePicker1.Size = new System.Drawing.Size(172, 22);
-            this.dateTimePicker1.TabIndex = 21;
-            this.dateTimePicker1.Value = new System.DateTime(2023, 9, 25, 0, 0, 0, 0);
+            this.dtpFecha2.Location = new System.Drawing.Point(363, 72);
+            this.dtpFecha2.MaxDate = new System.DateTime(2025, 12, 31, 0, 0, 0, 0);
+            this.dtpFecha2.MinDate = new System.DateTime(2010, 1, 1, 0, 0, 0, 0);
+            this.dtpFecha2.Name = "dtpFecha2";
+            this.dtpFecha2.Size = new System.Drawing.Size(172, 22);
+            this.dtpFecha2.TabIndex = 21;
+            this.dtpFecha2.Value = new System.DateTime(2023, 9, 25, 0, 0, 0, 0);
             // 
             // label1
             // 
             this.label1.AutoSize = true;
             this.label1.BackColor = System.Drawing.SystemColors.ButtonHighlight;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(298, 72);
+            this.label1.Location = new System.Drawing.Point(284, 75);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(73, 18);
             this.label1.TabIndex = 22;
@@ -106,7 +107,7 @@
             this.label2.AutoSize = true;
             this.label2.BackColor = System.Drawing.SystemColors.ButtonHighlight;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(567, 72);
+            this.label2.Location = new System.Drawing.Point(541, 75);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(95, 18);
             this.label2.TabIndex = 23;
@@ -116,29 +117,29 @@
             // 
             this.cmbTransportista.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cmbTransportista.FormattingEnabled = true;
-            this.cmbTransportista.Location = new System.Drawing.Point(668, 69);
+            this.cmbTransportista.Location = new System.Drawing.Point(642, 71);
             this.cmbTransportista.Name = "cmbTransportista";
             this.cmbTransportista.Size = new System.Drawing.Size(203, 24);
             this.cmbTransportista.TabIndex = 24;
             // 
-            // dataGridView1
+            // dgvPago
             // 
-            this.dataGridView1.AllowUserToDeleteRows = false;
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.dgvPago.AllowUserToDeleteRows = false;
+            this.dgvPago.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvPago.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.Viaje_ID,
             this.NombreCompleto,
             this.NombreSucursal,
             this.Fecha,
             this.ViajeTotal,
             this.TotalCalculado});
-            this.dataGridView1.Location = new System.Drawing.Point(12, 113);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.ReadOnly = true;
-            this.dataGridView1.RowHeadersWidth = 51;
-            this.dataGridView1.RowTemplate.Height = 24;
-            this.dataGridView1.Size = new System.Drawing.Size(873, 262);
-            this.dataGridView1.TabIndex = 25;
+            this.dgvPago.Location = new System.Drawing.Point(12, 113);
+            this.dgvPago.Name = "dgvPago";
+            this.dgvPago.ReadOnly = true;
+            this.dgvPago.RowHeadersWidth = 51;
+            this.dgvPago.RowTemplate.Height = 24;
+            this.dgvPago.Size = new System.Drawing.Size(873, 262);
+            this.dgvPago.TabIndex = 25;
             // 
             // Viaje_ID
             // 
@@ -198,13 +199,28 @@
             this.label10.TabIndex = 34;
             this.label10.Text = "Total a pagar:";
             // 
-            // txtRegistrador
+            // txtmonto
             // 
-            this.txtRegistrador.Location = new System.Drawing.Point(377, 394);
-            this.txtRegistrador.Name = "txtRegistrador";
-            this.txtRegistrador.ReadOnly = true;
-            this.txtRegistrador.Size = new System.Drawing.Size(227, 22);
-            this.txtRegistrador.TabIndex = 33;
+            this.txtmonto.Location = new System.Drawing.Point(377, 394);
+            this.txtmonto.Name = "txtmonto";
+            this.txtmonto.ReadOnly = true;
+            this.txtmonto.Size = new System.Drawing.Size(227, 22);
+            this.txtmonto.TabIndex = 33;
+            // 
+            // btnBuscar
+            // 
+            this.btnBuscar.BackColor = System.Drawing.Color.Beige;
+            this.btnBuscar.FlatAppearance.BorderSize = 0;
+            this.btnBuscar.IconChar = FontAwesome.Sharp.IconChar.MagnifyingGlass;
+            this.btnBuscar.IconColor = System.Drawing.Color.Black;
+            this.btnBuscar.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.btnBuscar.IconSize = 20;
+            this.btnBuscar.Location = new System.Drawing.Point(848, 67);
+            this.btnBuscar.Name = "btnBuscar";
+            this.btnBuscar.Size = new System.Drawing.Size(37, 32);
+            this.btnBuscar.TabIndex = 35;
+            this.btnBuscar.UseVisualStyleBackColor = false;
+            this.btnBuscar.Click += new System.EventHandler(this.iconButton1_Click);
             // 
             // FrmReportes
             // 
@@ -212,20 +228,21 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.SteelBlue;
             this.ClientSize = new System.Drawing.Size(897, 432);
+            this.Controls.Add(this.btnBuscar);
             this.Controls.Add(this.label10);
-            this.Controls.Add(this.txtRegistrador);
-            this.Controls.Add(this.dataGridView1);
+            this.Controls.Add(this.txtmonto);
+            this.Controls.Add(this.dgvPago);
             this.Controls.Add(this.cmbTransportista);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
-            this.Controls.Add(this.dateTimePicker1);
+            this.Controls.Add(this.dtpFecha2);
             this.Controls.Add(this.dtpFecha1);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label5);
             this.Name = "FrmReportes";
             this.Text = "FrmReportes";
             this.Load += new System.EventHandler(this.FrmReportes_Load);
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvPago)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -236,11 +253,11 @@
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.DateTimePicker dtpFecha1;
-        private System.Windows.Forms.DateTimePicker dateTimePicker1;
+        private System.Windows.Forms.DateTimePicker dtpFecha2;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.ComboBox cmbTransportista;
-        private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.DataGridView dgvPago;
         private System.Windows.Forms.DataGridViewTextBoxColumn Viaje_ID;
         private System.Windows.Forms.DataGridViewTextBoxColumn NombreCompleto;
         private System.Windows.Forms.DataGridViewTextBoxColumn NombreSucursal;
@@ -248,6 +265,7 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn ViajeTotal;
         private System.Windows.Forms.DataGridViewTextBoxColumn TotalCalculado;
         private System.Windows.Forms.Label label10;
-        private System.Windows.Forms.TextBox txtRegistrador;
+        private System.Windows.Forms.TextBox txtmonto;
+        private FontAwesome.Sharp.IconButton btnBuscar;
     }
 }
