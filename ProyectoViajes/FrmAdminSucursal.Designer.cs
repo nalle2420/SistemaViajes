@@ -37,8 +37,6 @@
             this.label4 = new System.Windows.Forms.Label();
             this.txtDistancia = new System.Windows.Forms.TextBox();
             this.btnGuardar = new FontAwesome.Sharp.IconButton();
-            this.btnEditar = new FontAwesome.Sharp.IconButton();
-            this.btnEliminar = new FontAwesome.Sharp.IconButton();
             this.dgvSucursal = new System.Windows.Forms.DataGridView();
             this.Empleado = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Sucursal = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -73,7 +71,7 @@
             this.label23.AutoSize = true;
             this.label23.BackColor = System.Drawing.SystemColors.ButtonHighlight;
             this.label23.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label23.Location = new System.Drawing.Point(25, 54);
+            this.label23.Location = new System.Drawing.Point(25, 76);
             this.label23.Name = "label23";
             this.label23.Size = new System.Drawing.Size(102, 18);
             this.label23.TabIndex = 2;
@@ -83,7 +81,7 @@
             // 
             this.cmbColaborador.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cmbColaborador.FormattingEnabled = true;
-            this.cmbColaborador.Location = new System.Drawing.Point(28, 80);
+            this.cmbColaborador.Location = new System.Drawing.Point(28, 102);
             this.cmbColaborador.Name = "cmbColaborador";
             this.cmbColaborador.Size = new System.Drawing.Size(227, 24);
             this.cmbColaborador.TabIndex = 4;
@@ -93,7 +91,7 @@
             // 
             this.cmbSucursal.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cmbSucursal.FormattingEnabled = true;
-            this.cmbSucursal.Location = new System.Drawing.Point(28, 153);
+            this.cmbSucursal.Location = new System.Drawing.Point(28, 175);
             this.cmbSucursal.Name = "cmbSucursal";
             this.cmbSucursal.Size = new System.Drawing.Size(227, 24);
             this.cmbSucursal.TabIndex = 6;
@@ -103,7 +101,7 @@
             this.label3.AutoSize = true;
             this.label3.BackColor = System.Drawing.SystemColors.ButtonHighlight;
             this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(25, 127);
+            this.label3.Location = new System.Drawing.Point(25, 149);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(74, 18);
             this.label3.TabIndex = 5;
@@ -114,7 +112,7 @@
             this.label4.AutoSize = true;
             this.label4.BackColor = System.Drawing.SystemColors.ButtonHighlight;
             this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(25, 206);
+            this.label4.Location = new System.Drawing.Point(25, 228);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(128, 18);
             this.label4.TabIndex = 7;
@@ -122,7 +120,7 @@
             // 
             // txtDistancia
             // 
-            this.txtDistancia.Location = new System.Drawing.Point(28, 227);
+            this.txtDistancia.Location = new System.Drawing.Point(28, 249);
             this.txtDistancia.Name = "txtDistancia";
             this.txtDistancia.Size = new System.Drawing.Size(227, 22);
             this.txtDistancia.TabIndex = 8;
@@ -141,7 +139,7 @@
             this.btnGuardar.IconColor = System.Drawing.Color.White;
             this.btnGuardar.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.btnGuardar.IconSize = 25;
-            this.btnGuardar.Location = new System.Drawing.Point(28, 284);
+            this.btnGuardar.Location = new System.Drawing.Point(28, 342);
             this.btnGuardar.Name = "btnGuardar";
             this.btnGuardar.Size = new System.Drawing.Size(227, 35);
             this.btnGuardar.TabIndex = 9;
@@ -150,48 +148,6 @@
             this.btnGuardar.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btnGuardar.UseVisualStyleBackColor = false;
             this.btnGuardar.Click += new System.EventHandler(this.btnGuardar_Click);
-            // 
-            // btnEditar
-            // 
-            this.btnEditar.BackColor = System.Drawing.Color.RoyalBlue;
-            this.btnEditar.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnEditar.FlatAppearance.BorderColor = System.Drawing.Color.Black;
-            this.btnEditar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnEditar.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnEditar.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.btnEditar.IconChar = FontAwesome.Sharp.IconChar.PenToSquare;
-            this.btnEditar.IconColor = System.Drawing.Color.White;
-            this.btnEditar.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.btnEditar.IconSize = 25;
-            this.btnEditar.Location = new System.Drawing.Point(28, 328);
-            this.btnEditar.Name = "btnEditar";
-            this.btnEditar.Size = new System.Drawing.Size(227, 35);
-            this.btnEditar.TabIndex = 10;
-            this.btnEditar.Text = "Editar";
-            this.btnEditar.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.btnEditar.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.btnEditar.UseVisualStyleBackColor = false;
-            // 
-            // btnEliminar
-            // 
-            this.btnEliminar.BackColor = System.Drawing.Color.Firebrick;
-            this.btnEliminar.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnEliminar.FlatAppearance.BorderColor = System.Drawing.Color.Black;
-            this.btnEliminar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnEliminar.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnEliminar.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.btnEliminar.IconChar = FontAwesome.Sharp.IconChar.TrashAlt;
-            this.btnEliminar.IconColor = System.Drawing.Color.White;
-            this.btnEliminar.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.btnEliminar.IconSize = 25;
-            this.btnEliminar.Location = new System.Drawing.Point(28, 373);
-            this.btnEliminar.Name = "btnEliminar";
-            this.btnEliminar.Size = new System.Drawing.Size(227, 35);
-            this.btnEliminar.TabIndex = 11;
-            this.btnEliminar.Text = "Eliminar";
-            this.btnEliminar.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.btnEliminar.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.btnEliminar.UseVisualStyleBackColor = false;
             // 
             // dgvSucursal
             // 
@@ -249,8 +205,6 @@
             this.ClientSize = new System.Drawing.Size(889, 432);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.dgvSucursal);
-            this.Controls.Add(this.btnEliminar);
-            this.Controls.Add(this.btnEditar);
             this.Controls.Add(this.btnGuardar);
             this.Controls.Add(this.txtDistancia);
             this.Controls.Add(this.label4);
@@ -280,8 +234,6 @@
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.TextBox txtDistancia;
         private FontAwesome.Sharp.IconButton btnGuardar;
-        private FontAwesome.Sharp.IconButton btnEditar;
-        private FontAwesome.Sharp.IconButton btnEliminar;
         private System.Windows.Forms.DataGridView dgvSucursal;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.DataGridViewTextBoxColumn Empleado;
