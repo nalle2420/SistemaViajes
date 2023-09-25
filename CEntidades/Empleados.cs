@@ -26,6 +26,8 @@ namespace CEntidades
 
         public bool Emp_transporte { get; set; }
 
-        
+        public int Emp_Distancia { get; set; }
+
+
     }
 }

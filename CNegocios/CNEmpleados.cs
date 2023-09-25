@@ -23,6 +23,16 @@ namespace CNegocios
             return objEmpleado.Listar();
         }
 
-        
+        public List<Empleados> BuscarEmpxSucursal(int id)
+        {
+            return objEmpleado.BuscarEmpleadosxSucursal(id);
+        }
+
+        public int EmpleadoxFechal(int id)
+        {
+            return objEmpleado.FechaEmpleado(id);
+        }
+
+
     }
 }

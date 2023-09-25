@@ -116,10 +116,15 @@ namespace ProyectoViajes
 
         private void MenuRegistro_Click(object sender, EventArgs e)
         {
-            AbrirFormulario(MenuRegistro, new FrmRegistroViajes());
+            AbrirFormulario(MenuRegistro, new FrmRegistroViajes(usuarioActual, EmpleadoActual));
         }
 
         private void Contenedor_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void lblNombre_Click(object sender, EventArgs e)
         {
 
         }

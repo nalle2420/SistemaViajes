@@ -39,12 +39,12 @@
             this.btnGuardar = new FontAwesome.Sharp.IconButton();
             this.btnEditar = new FontAwesome.Sharp.IconButton();
             this.btnEliminar = new FontAwesome.Sharp.IconButton();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.Emp_ID = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dgvSucursal = new System.Windows.Forms.DataGridView();
+            this.label5 = new System.Windows.Forms.Label();
+            this.Empleado = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Sucursal = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Distancia_KM = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.label5 = new System.Windows.Forms.Label();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvSucursal)).BeginInit();
             this.SuspendLayout();
             // 
             // label1
@@ -87,6 +87,7 @@
             this.cmbColaborador.Name = "cmbColaborador";
             this.cmbColaborador.Size = new System.Drawing.Size(227, 24);
             this.cmbColaborador.TabIndex = 4;
+            this.cmbColaborador.SelectedIndexChanged += new System.EventHandler(this.cmbColaborador_SelectedIndexChanged);
             // 
             // cmbSucursal
             // 
@@ -146,6 +147,7 @@
             this.btnGuardar.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btnGuardar.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btnGuardar.UseVisualStyleBackColor = false;
+            this.btnGuardar.Click += new System.EventHandler(this.btnGuardar_Click);
             // 
             // btnEditar
             // 
@@ -189,27 +191,39 @@
             this.btnEliminar.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btnEliminar.UseVisualStyleBackColor = false;
             // 
-            // dataGridView1
+            // dgvSucursal
             // 
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.Emp_ID,
+            this.dgvSucursal.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvSucursal.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.Empleado,
             this.Sucursal,
             this.Distancia_KM});
-            this.dataGridView1.Location = new System.Drawing.Point(329, 80);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.RowHeadersWidth = 51;
-            this.dataGridView1.RowTemplate.Height = 24;
-            this.dataGridView1.Size = new System.Drawing.Size(529, 328);
-            this.dataGridView1.TabIndex = 12;
-            this.dataGridView1.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
+            this.dgvSucursal.Location = new System.Drawing.Point(329, 80);
+            this.dgvSucursal.Name = "dgvSucursal";
+            this.dgvSucursal.RowHeadersWidth = 51;
+            this.dgvSucursal.RowTemplate.Height = 24;
+            this.dgvSucursal.Size = new System.Drawing.Size(529, 328);
+            this.dgvSucursal.TabIndex = 12;
+            this.dgvSucursal.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
             // 
-            // Emp_ID
+            // label5
             // 
-            this.Emp_ID.HeaderText = "ID Empleado";
-            this.Emp_ID.MinimumWidth = 6;
-            this.Emp_ID.Name = "Emp_ID";
-            this.Emp_ID.Width = 125;
+            this.label5.BackColor = System.Drawing.Color.SteelBlue;
+            this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label5.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.label5.Location = new System.Drawing.Point(324, 52);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(452, 25);
+            this.label5.TabIndex = 13;
+            this.label5.Text = "Sucursales asignadas :";
+            this.label5.Click += new System.EventHandler(this.label5_Click);
+            // 
+            // Empleado
+            // 
+            this.Empleado.HeaderText = "ID Empleado";
+            this.Empleado.MinimumWidth = 6;
+            this.Empleado.Name = "Empleado";
+            this.Empleado.Width = 125;
             // 
             // Sucursal
             // 
@@ -225,18 +239,6 @@
             this.Distancia_KM.Name = "Distancia_KM";
             this.Distancia_KM.Width = 150;
             // 
-            // label5
-            // 
-            this.label5.BackColor = System.Drawing.Color.SteelBlue;
-            this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.label5.Location = new System.Drawing.Point(324, 52);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(452, 25);
-            this.label5.TabIndex = 13;
-            this.label5.Text = "Sucursales asignadas :";
-            this.label5.Click += new System.EventHandler(this.label5_Click);
-            // 
             // FrmAdminSucursal
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -244,7 +246,7 @@
             this.BackColor = System.Drawing.Color.SteelBlue;
             this.ClientSize = new System.Drawing.Size(889, 432);
             this.Controls.Add(this.label5);
-            this.Controls.Add(this.dataGridView1);
+            this.Controls.Add(this.dgvSucursal);
             this.Controls.Add(this.btnEliminar);
             this.Controls.Add(this.btnEditar);
             this.Controls.Add(this.btnGuardar);
@@ -259,7 +261,7 @@
             this.Name = "FrmAdminSucursal";
             this.Text = "FrmAdminSucursal";
             this.Load += new System.EventHandler(this.FrmAdminSucursal_Load);
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvSucursal)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -278,9 +280,9 @@
         private FontAwesome.Sharp.IconButton btnGuardar;
         private FontAwesome.Sharp.IconButton btnEditar;
         private FontAwesome.Sharp.IconButton btnEliminar;
-        private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.DataGridView dgvSucursal;
         private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Emp_ID;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Empleado;
         private System.Windows.Forms.DataGridViewTextBoxColumn Sucursal;
         private System.Windows.Forms.DataGridViewTextBoxColumn Distancia_KM;
     }

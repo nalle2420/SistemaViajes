@@ -194,6 +194,7 @@
             this.lblNombre.Size = new System.Drawing.Size(85, 20);
             this.lblNombre.TabIndex = 5;
             this.lblNombre.Text = "lblNombre";
+            this.lblNombre.Click += new System.EventHandler(this.lblNombre_Click);
             // 
             // FrmInicio
             // 
