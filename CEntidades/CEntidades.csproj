@@ -45,6 +45,7 @@
     <Compile Include="Permiso.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Puesto.cs" />
+    <Compile Include="Reporte.cs" />
     <Compile Include="Sucursal.cs" />
     <Compile Include="SucursalxEmpleado.cs" />
     <Compile Include="Transportistas.cs" />

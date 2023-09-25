@@ -10,6 +10,8 @@ namespace CEntidades
     {
         public int VD_ID { get; set; }
         public Empleados oEmpleado { get; set; }
+         
+        public int idEmp { get; set; }
         public int Distancia_KM { get; set; }
     }
 }

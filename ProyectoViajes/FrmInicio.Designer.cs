@@ -56,7 +56,7 @@
             this.MenuReporte});
             this.menuNav.Location = new System.Drawing.Point(0, 54);
             this.menuNav.Name = "menuNav";
-            this.menuNav.Size = new System.Drawing.Size(938, 68);
+            this.menuNav.Size = new System.Drawing.Size(903, 68);
             this.menuNav.TabIndex = 0;
             this.menuNav.Text = "menuStrip1";
             // 
@@ -96,6 +96,7 @@
             this.MenuAdmin.Size = new System.Drawing.Size(125, 64);
             this.MenuAdmin.Text = "Admin Sucursal";
             this.MenuAdmin.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
+            this.MenuAdmin.Click += new System.EventHandler(this.MenuAdmin_Click);
             // 
             // MenuRegistro
             // 
@@ -108,6 +109,7 @@
             this.MenuRegistro.Size = new System.Drawing.Size(121, 64);
             this.MenuRegistro.Text = "Registro Viajes";
             this.MenuRegistro.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
+            this.MenuRegistro.Click += new System.EventHandler(this.MenuRegistro_Click);
             // 
             // MenuTransportista
             // 
@@ -142,7 +144,7 @@
             this.MenuTitulo.Location = new System.Drawing.Point(0, 0);
             this.MenuTitulo.Name = "MenuTitulo";
             this.MenuTitulo.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.MenuTitulo.Size = new System.Drawing.Size(938, 54);
+            this.MenuTitulo.Size = new System.Drawing.Size(903, 54);
             this.MenuTitulo.TabIndex = 1;
             this.MenuTitulo.Text = "menuStrip2";
             // 
@@ -164,8 +166,9 @@
             this.Contenedor.Dock = System.Windows.Forms.DockStyle.Fill;
             this.Contenedor.Location = new System.Drawing.Point(0, 122);
             this.Contenedor.Name = "Contenedor";
-            this.Contenedor.Size = new System.Drawing.Size(938, 398);
+            this.Contenedor.Size = new System.Drawing.Size(903, 433);
             this.Contenedor.TabIndex = 3;
+            this.Contenedor.Paint += new System.Windows.Forms.PaintEventHandler(this.Contenedor_Paint);
             // 
             // label2
             // 
@@ -173,7 +176,7 @@
             this.label2.BackColor = System.Drawing.Color.SteelBlue;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.ForeColor = System.Drawing.Color.AliceBlue;
-            this.label2.Location = new System.Drawing.Point(753, 9);
+            this.label2.Location = new System.Drawing.Point(786, 9);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(101, 20);
             this.label2.TabIndex = 4;
@@ -186,17 +189,18 @@
             this.lblNombre.BackColor = System.Drawing.Color.SteelBlue;
             this.lblNombre.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblNombre.ForeColor = System.Drawing.Color.AliceBlue;
-            this.lblNombre.Location = new System.Drawing.Point(753, 29);
+            this.lblNombre.Location = new System.Drawing.Point(786, 29);
             this.lblNombre.Name = "lblNombre";
-            this.lblNombre.Size = new System.Drawing.Size(106, 25);
+            this.lblNombre.Size = new System.Drawing.Size(85, 20);
             this.lblNombre.TabIndex = 5;
             this.lblNombre.Text = "lblNombre";
+            this.lblNombre.Click += new System.EventHandler(this.lblNombre_Click);
             // 
             // FrmInicio
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(938, 520);
+            this.ClientSize = new System.Drawing.Size(903, 555);
             this.Controls.Add(this.lblNombre);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.Contenedor);

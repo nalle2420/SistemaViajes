@@ -11,6 +11,8 @@ namespace CEntidades
         public int Trp_ID { get; set; }
         public string Trp_Nombre { get; set; }
         public string Trp_Apellido { get; set; }
+
+        public string Trp_NombreCompleto { get; set; }
         public string Trp_Telefono { get; set; }
         public decimal Trp_Tarifa { get; set; }
    
