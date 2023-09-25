@@ -17,14 +17,29 @@ namespace ProyectoViajes
         private static Usuarios usuarioActual;
         private static Empleados empActual;
         List<Sucursal> lista = new List<Sucursal>();
+        List<Viaje_Detalles> listaDetalleViaje = new List<Viaje_Detalles>();
+        CNDetalleViaje cndetalle = new CNDetalleViaje();
         CNSucursal cnSucur = new CNSucursal();
         CNEmpleados cnEmp = new CNEmpleados();
+        CNViajes cnViajes = new CNViajes();
         CNSucursalxEmpleado cnSuxemp = new CNSucursalxEmpleado();
         SucursalxEmpleado SuxEmp = new SucursalxEmpleado
         {
             oEmpleado = new Empleados(),
             oSucursal = new Sucursal()
         };
+        Viajes viaje = new Viajes
+        {
+            oEmpleado = new Empleados(),
+            oSucursal = new Sucursal(),
+            oTransportista = new Transportistas() 
+        };
+        Viaje_Detalles dviaje = new Viaje_Detalles
+        {
+            oEmpleado = new Empleados(),
+           
+        };
+
         List<Transportistas> LisTr = new List<Transportistas>();
         CNTransportista cnTr = new CNTransportista();
         HashSet<Empleados> empleadosAgregados = new HashSet<Empleados>();
@@ -44,6 +59,30 @@ namespace ProyectoViajes
             txtRegistrador.Text = empActual.Emp_Nombre+ " "+ empActual.Emp_Apellido;
             txtRegistrador.ReadOnly = true;
             txtDistancia.Text=distanciaKM.ToString();
+        }
+        private void obtenerValores()
+
+        {
+
+            viaje.oEmpleado.Emp_ID = Convert.ToInt32(empActual.Emp_ID);
+            viaje.oSucursal.Sucursal_ID = Convert.ToInt32(cmbSucursal.SelectedValue);
+            viaje.oTransportista.Trp_ID = Convert.ToInt32(cmbTransportista.SelectedValue);
+            viaje.Viaje_Total = Convert.ToInt32(txtDistancia.Text);
+        }
+
+        private void ObtenerValoresDGV( int viajeid)
+        {
+
+            foreach (DataGridViewRow fila in dgvEmpleado.Rows)
+            {
+                if (fila.IsNewRow) continue; 
+                dviaje.oEmpleado.Emp_ID = Convert.ToInt32(fila.Cells["Emp_Id"].Value);
+                dviaje.idEmp = Convert.ToInt32(fila.Cells["Emp_Id"].Value);
+                dviaje.VD_ID = viajeid;
+                dviaje.Distancia_KM = Convert.ToInt32(fila.Cells["Distancia_KM"].Value);
+                listaDetalleViaje.Add(dviaje);
+            }
+
         }
 
         private void LlenarSucursal()
@@ -180,9 +219,27 @@ namespace ProyectoViajes
             LlenarDWV();
         }
 
+
+
         private void btnRegistrar_Click(object sender, EventArgs e)
         {
-            
+            if (dgvEmpleado.Rows.Count > 1)
+            {
+                obtenerValores();
+                int idviaje = cnViajes.InsertarNuevoViaje(viaje);
+                
+                ObtenerValoresDGV(idviaje);
+                foreach (Viaje_Detalles detalles in listaDetalleViaje)
+                {
+                    cndetalle.InsertarNuevoDetalle(detalles);
+                }
+                MessageBox.Show("Viaje registrado correctamente");
+                LlenarSucursal();
+            }
+            else
+            {
+                MessageBox.Show("Debe seleccionar los empleados que viajaran");
+            }
         }
     }
 }

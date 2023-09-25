@@ -42,11 +42,13 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="CDDetalleEnvio.cs" />
     <Compile Include="CDEmpleados.cs" />
     <Compile Include="CDSucursales.cs" />
     <Compile Include="CDSucursalxEmpleado.cs" />
     <Compile Include="CDTransportista.cs" />
     <Compile Include="CDUsuarios.cs" />
+    <Compile Include="CDViajes.cs" />
     <Compile Include="Conexion.cs" />
     <Compile Include="CDPermisos.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
