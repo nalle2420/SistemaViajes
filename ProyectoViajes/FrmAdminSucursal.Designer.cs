@@ -40,10 +40,10 @@
             this.btnEditar = new FontAwesome.Sharp.IconButton();
             this.btnEliminar = new FontAwesome.Sharp.IconButton();
             this.dgvSucursal = new System.Windows.Forms.DataGridView();
-            this.label5 = new System.Windows.Forms.Label();
             this.Empleado = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Sucursal = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Distancia_KM = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.label5 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.dgvSucursal)).BeginInit();
             this.SuspendLayout();
             // 
@@ -126,6 +126,8 @@
             this.txtDistancia.Name = "txtDistancia";
             this.txtDistancia.Size = new System.Drawing.Size(227, 22);
             this.txtDistancia.TabIndex = 8;
+            this.txtDistancia.TextChanged += new System.EventHandler(this.txtDistancia_TextChanged);
+            this.txtDistancia.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtDistancia_KeyPress);
             // 
             // btnGuardar
             // 
@@ -206,18 +208,6 @@
             this.dgvSucursal.TabIndex = 12;
             this.dgvSucursal.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
             // 
-            // label5
-            // 
-            this.label5.BackColor = System.Drawing.Color.SteelBlue;
-            this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.label5.Location = new System.Drawing.Point(324, 52);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(452, 25);
-            this.label5.TabIndex = 13;
-            this.label5.Text = "Sucursales asignadas :";
-            this.label5.Click += new System.EventHandler(this.label5_Click);
-            // 
             // Empleado
             // 
             this.Empleado.HeaderText = "ID Empleado";
@@ -238,6 +228,18 @@
             this.Distancia_KM.MinimumWidth = 6;
             this.Distancia_KM.Name = "Distancia_KM";
             this.Distancia_KM.Width = 150;
+            // 
+            // label5
+            // 
+            this.label5.BackColor = System.Drawing.Color.SteelBlue;
+            this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label5.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.label5.Location = new System.Drawing.Point(324, 52);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(452, 25);
+            this.label5.TabIndex = 13;
+            this.label5.Text = "Sucursales asignadas :";
+            this.label5.Click += new System.EventHandler(this.label5_Click);
             // 
             // FrmAdminSucursal
             // 
