@@ -13,7 +13,8 @@ using CEntidades;
 namespace ProyectoViajes
 {
     public partial class FrmLogin : Form
-    {
+    {  
+       
         public FrmLogin()
         {
             InitializeComponent();
@@ -30,15 +31,14 @@ namespace ProyectoViajes
         }
 
         private void btnIngresar_Click(object sender, EventArgs e)
-        {
+        {   
             try
             {
                 //buscar usuario
                 Usuarios oUsuario = new Usuarios();
                 CNUsuarios cUsuario = new CNUsuarios();
                 oUsuario = cUsuario.BuscarUsuario(txtUsuario.Text);
-       
-
+                string contra= cUsuario.GetSHA256(txtContra.Text);
 
 
                 //Verificar si el usuario existe
@@ -48,9 +48,9 @@ namespace ProyectoViajes
                 }
                 else
                 {
-                    if ((oUsuario.Usu_clave == txtContra.Text) && (oUsuario.Usu_activo == true))
+                    if ((oUsuario.Usu_clave == contra) && (oUsuario.Usu_activo == true))
                     {
-                        
+
                         FrmInicio frmInicio = new FrmInicio(oUsuario);
                         frmInicio.Show();
                         this.Hide();

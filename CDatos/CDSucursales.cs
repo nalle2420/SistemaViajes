@@ -43,6 +43,8 @@ namespace CDatos
             catch (Exception ex)
             {
                 lista = new List<Sucursal>();
+                Console.WriteLine(ex.ToString());
+
             }
             finally
             {
@@ -78,6 +80,8 @@ namespace CDatos
             catch (Exception ex)
             {
                 lista = new List<Sucursal>();
+                Console.WriteLine(ex.ToString());
+
             }
             finally
             {

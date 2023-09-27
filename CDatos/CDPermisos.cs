@@ -41,6 +41,8 @@ namespace CDatos
             catch (Exception ex)
             {
                 lista = new List<Permiso>();
+                Console.WriteLine(ex.ToString());
+
             }
             finally
             {

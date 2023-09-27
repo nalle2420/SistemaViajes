@@ -109,6 +109,7 @@ namespace CDatos
             catch (Exception ex)
             {
                 lista = new List<Empleados>();
+                Console.WriteLine(ex.ToString());
             }
             finally
             {
@@ -153,6 +154,8 @@ namespace CDatos
             catch (Exception ex)
             {
                 lista = new List<Empleados>();
+                Console.WriteLine(ex.ToString());
+
             }
             finally
             {

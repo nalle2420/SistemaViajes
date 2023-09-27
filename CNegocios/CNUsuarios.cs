@@ -24,7 +24,7 @@ namespace CNegocios
             
         }
 
-        public static string GetSHA256(string str)
+        public string GetSHA256(string str)
         {
             SHA256 sha256 = SHA256Managed.Create();
             ASCIIEncoding encoding = new ASCIIEncoding();
@@ -34,5 +34,7 @@ namespace CNegocios
             for (int i = 0; i < stream.Length; i++) sb.AppendFormat("{0:x2}", stream[i]);
             return sb.ToString();
         }
+
+
     }
 }

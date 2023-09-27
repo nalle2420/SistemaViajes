@@ -42,6 +42,8 @@ namespace CDatos
             catch (Exception ex)
             {
                 lista = new List<SucursalxEmpleado>();
+                Console.WriteLine(ex.ToString());
+
             }
             finally
             {
@@ -68,8 +70,9 @@ namespace CDatos
             }
             catch (Exception ex)
             {
+                Console.WriteLine(ex.ToString());
                 return "Ocurrio un error al insertar el dato";
-                Console.WriteLine(ex.Message);
+
             }
             finally
             {

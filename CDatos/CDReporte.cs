@@ -53,6 +53,8 @@ namespace CDatos
             catch (Exception ex)
             {
                 lista = new List<Reporte>();
+                Console.WriteLine(ex.ToString());
+
             }
             finally
             {

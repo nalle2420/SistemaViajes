@@ -41,6 +41,8 @@ namespace CDatos
             }
             catch (Exception ex){
                 lista = new List<Usuarios>();
+                Console.WriteLine(ex.ToString());
+
             }
             finally
             {
@@ -75,6 +77,8 @@ namespace CDatos
             catch (Exception ex)
             {
                 usu = null;
+                Console.WriteLine(ex.ToString());
+
             }
             finally
             {

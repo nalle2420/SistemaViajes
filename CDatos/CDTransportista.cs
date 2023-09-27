@@ -45,6 +45,8 @@ namespace CDatos
             catch (Exception ex)
             {
                 lista = new List<Transportistas>();
+                Console.WriteLine(ex.ToString());
+
             }
             finally
             {
