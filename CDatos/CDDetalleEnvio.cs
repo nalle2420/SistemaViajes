@@ -13,7 +13,7 @@ namespace CDatos
     public class CDDetalleEnvio
     {
         public Conexion conec = new Conexion();
-        public void AgregarDetalle(Viaje_Detalles detalles)
+        public void AgregarDetalle(Viaje_Detalles detalles) // envia a insertar los detalles de un viaje
         {
             conec.OpenConnection();
             try

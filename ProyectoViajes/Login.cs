@@ -30,7 +30,7 @@ namespace ProyectoViajes
             this.Close();
         }
 
-        private void btnIngresar_Click(object sender, EventArgs e)
+        private void btnIngresar_Click(object sender, EventArgs e) //envia a comprobar si las credenciales son correctas
         {   
             try
             {
@@ -38,7 +38,7 @@ namespace ProyectoViajes
                 Usuarios oUsuario = new Usuarios();
                 CNUsuarios cUsuario = new CNUsuarios();
                 oUsuario = cUsuario.BuscarUsuario(txtUsuario.Text);
-                string contra= cUsuario.GetSHA256(txtContra.Text);
+                string contra= cUsuario.GetSHA256(txtContra.Text); //encripta el texto ingresado
 
 
                 //Verificar si el usuario existe

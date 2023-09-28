@@ -13,7 +13,7 @@ namespace CDatos
     {
         public Conexion conec = new Conexion();
 
-        public int InsertarViaje(Viajes viaje)
+        public int InsertarViaje(Viajes viaje) //ingresa un nuevo viaje
         {
             int confirmacion = 0;
             conec.OpenConnection();

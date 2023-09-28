@@ -13,7 +13,7 @@ namespace CDatos
     {
         public Conexion conec = new Conexion();
 
-        public List<Permiso> PermisosPorEmpleado(int id)
+        public List<Permiso> PermisosPorEmpleado(int id) //obtiene lista de los permisos que tiene el usuario
         {
             List<Permiso> lista = new List<Permiso>();
 

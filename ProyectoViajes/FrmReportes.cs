@@ -29,13 +29,13 @@ namespace ProyectoViajes
 
         }
 
-        private void LlenarDWV()
+        private void LlenarDWV() //llena el data grid view con los datos filtrados 
         {
             Transportistas transportistaSeleccionado = (Transportistas)cmbTransportista.SelectedItem;
             List<Reporte> listReporte = cnreport.ConsultaReporte(dtpFecha1.Value, dtpFecha2.Value, transportistaSeleccionado.Trp_ID);
             montoTotal = 0;
             // Configura el DataGridView si no está configurado previamente
-            if (dtpFecha1.Value < dtpFecha2.Value)
+            if (dtpFecha1.Value <= dtpFecha2.Value)
             {
                 if (dgvPago.Columns.Count == 0)
                 {
@@ -71,7 +71,7 @@ namespace ProyectoViajes
             }
 
         }
-        private void LlenarTransportista()
+        private void LlenarTransportista() //llena cmb de transportista
         {
             try
             {

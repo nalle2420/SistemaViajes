@@ -13,7 +13,7 @@ namespace CDatos
     {
         public Conexion conec = new Conexion();
 
-        public List<Reporte> ConsultaReporte(DateTime fecha1, DateTime fecha2, int trp)
+        public List<Reporte> ConsultaReporte(DateTime fecha1, DateTime fecha2, int trp) // obtiene los viajes de un transportista entre un rango de fecha
         {
             List<Reporte> lista = new List<Reporte>();
 

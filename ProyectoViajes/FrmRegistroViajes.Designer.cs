@@ -28,7 +28,6 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.components = new System.ComponentModel.Container();
             this.label5 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.cmbSucursal = new System.Windows.Forms.ComboBox();
@@ -39,7 +38,6 @@
             this.label2 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.txtRegistrador = new System.Windows.Forms.TextBox();
-            this.contextMenuStrip1 = new System.Windows.Forms.ContextMenuStrip(this.components);
             this.label6 = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
             this.txtKM = new System.Windows.Forms.TextBox();
@@ -50,9 +48,10 @@
             this.label10 = new System.Windows.Forms.Label();
             this.btnRegistrar = new FontAwesome.Sharp.IconButton();
             this.dgvEmpleado = new System.Windows.Forms.DataGridView();
-            this.Emp_Id = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.btnQuitar = new FontAwesome.Sharp.IconButton();
+            this.Emp_ID = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Emp_NomCompleto = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Distancia_KM = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Emp_Distancia = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.dgvEmpleado)).BeginInit();
             this.SuspendLayout();
             // 
@@ -157,12 +156,6 @@
             this.txtRegistrador.ReadOnly = true;
             this.txtRegistrador.Size = new System.Drawing.Size(227, 22);
             this.txtRegistrador.TabIndex = 23;
-            // 
-            // contextMenuStrip1
-            // 
-            this.contextMenuStrip1.ImageScalingSize = new System.Drawing.Size(20, 20);
-            this.contextMenuStrip1.Name = "contextMenuStrip1";
-            this.contextMenuStrip1.Size = new System.Drawing.Size(61, 4);
             // 
             // label6
             // 
@@ -282,36 +275,63 @@
             // 
             this.dgvEmpleado.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvEmpleado.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.Emp_Id,
+            this.Emp_ID,
             this.Emp_NomCompleto,
-            this.Distancia_KM});
+            this.Emp_Distancia});
             this.dgvEmpleado.Location = new System.Drawing.Point(347, 107);
             this.dgvEmpleado.Name = "dgvEmpleado";
             this.dgvEmpleado.RowHeadersWidth = 51;
             this.dgvEmpleado.RowTemplate.Height = 24;
-            this.dgvEmpleado.Size = new System.Drawing.Size(516, 304);
+            this.dgvEmpleado.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.dgvEmpleado.Size = new System.Drawing.Size(516, 274);
             this.dgvEmpleado.TabIndex = 34;
             this.dgvEmpleado.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvSucursal_CellContentClick);
             // 
-            // Emp_Id
+            // btnQuitar
             // 
-            this.Emp_Id.HeaderText = "ID ";
-            this.Emp_Id.MinimumWidth = 6;
-            this.Emp_Id.Name = "Emp_Id";
+            this.btnQuitar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.btnQuitar.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnQuitar.FlatAppearance.BorderColor = System.Drawing.Color.Black;
+            this.btnQuitar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnQuitar.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnQuitar.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.btnQuitar.IconChar = FontAwesome.Sharp.IconChar.Trash;
+            this.btnQuitar.IconColor = System.Drawing.Color.White;
+            this.btnQuitar.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.btnQuitar.IconSize = 25;
+            this.btnQuitar.Location = new System.Drawing.Point(484, 387);
+            this.btnQuitar.Name = "btnQuitar";
+            this.btnQuitar.Size = new System.Drawing.Size(227, 35);
+            this.btnQuitar.TabIndex = 35;
+            this.btnQuitar.Text = "Quitar empleado";
+            this.btnQuitar.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.btnQuitar.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.btnQuitar.UseVisualStyleBackColor = false;
+            this.btnQuitar.Click += new System.EventHandler(this.btnQuitar_Click);
+            // 
+            // Emp_ID
+            // 
+            this.Emp_ID.DataPropertyName = "Emp_ID";
+            this.Emp_ID.HeaderText = "ID";
+            this.Emp_ID.MinimumWidth = 6;
+            this.Emp_ID.Name = "Emp_ID";
+            this.Emp_ID.Width = 125;
             // 
             // Emp_NomCompleto
             // 
+            this.Emp_NomCompleto.DataPropertyName = "Emp_NomCompleto";
             this.Emp_NomCompleto.HeaderText = "Empleado";
             this.Emp_NomCompleto.MinimumWidth = 6;
             this.Emp_NomCompleto.Name = "Emp_NomCompleto";
-            this.Emp_NomCompleto.Width = 211;
+            this.Emp_NomCompleto.Width = 212;
             // 
-            // Distancia_KM
+            // Emp_Distancia
             // 
-            this.Distancia_KM.HeaderText = "Distancia(KM)";
-            this.Distancia_KM.MinimumWidth = 6;
-            this.Distancia_KM.Name = "Distancia_KM";
-            this.Distancia_KM.Width = 150;
+            this.Emp_Distancia.DataPropertyName = "Emp_Distancia";
+            this.Emp_Distancia.HeaderText = "Distancia";
+            this.Emp_Distancia.MinimumWidth = 6;
+            this.Emp_Distancia.Name = "Emp_Distancia";
+            this.Emp_Distancia.Width = 125;
             // 
             // FrmRegistroViajes
             // 
@@ -319,6 +339,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.SteelBlue;
             this.ClientSize = new System.Drawing.Size(889, 432);
+            this.Controls.Add(this.btnQuitar);
             this.Controls.Add(this.dgvEmpleado);
             this.Controls.Add(this.btnRegistrar);
             this.Controls.Add(this.label10);
@@ -360,7 +381,6 @@
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.TextBox txtRegistrador;
-        private System.Windows.Forms.ContextMenuStrip contextMenuStrip1;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.TextBox txtKM;
@@ -371,8 +391,9 @@
         private System.Windows.Forms.Label label10;
         private FontAwesome.Sharp.IconButton btnRegistrar;
         private System.Windows.Forms.DataGridView dgvEmpleado;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Emp_Id;
+        private FontAwesome.Sharp.IconButton btnQuitar;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Emp_ID;
         private System.Windows.Forms.DataGridViewTextBoxColumn Emp_NomCompleto;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Distancia_KM;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Emp_Distancia;
     }
 }

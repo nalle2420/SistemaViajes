@@ -13,7 +13,7 @@ namespace CDatos
     {
         public Conexion conec = new Conexion();
 
-        public List<SucursalxEmpleado> BuscarSucursalxEmpleado(int id)
+        public List<SucursalxEmpleado> BuscarSucursalxEmpleado(int id) // obtiene las sucursales a las que el empleado esta afiliado
         {
             List<SucursalxEmpleado> lista = new List<SucursalxEmpleado>();
 
@@ -53,7 +53,7 @@ namespace CDatos
         }
 
 
-        public string AgregarSucursalXEmpleado(SucursalxEmpleado relacion)
+        public string AgregarSucursalXEmpleado(SucursalxEmpleado relacion) // agrega la relacion de empleado y sucursal
         {
             string mensaje = null;
             conec.OpenConnection();

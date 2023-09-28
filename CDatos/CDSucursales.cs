@@ -14,7 +14,7 @@ namespace CDatos
 
         public Conexion conec = new Conexion();
 
-        public List<Sucursal> BuscarSucursalNoVinculada(int id)
+        public List<Sucursal> BuscarSucursalNoVinculada(int id) // obtiene las sucursales al que el empleado no esta vinculado
         {
             List<Sucursal> lista = new List<Sucursal>();
 
@@ -54,7 +54,7 @@ namespace CDatos
         }
 
 
-        public List<Sucursal> Listar()
+        public List<Sucursal> Listar() // lista las sucursales
         {
             List<Sucursal> lista = new List<Sucursal>();
 

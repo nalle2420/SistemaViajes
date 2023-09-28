@@ -14,7 +14,7 @@ namespace CDatos
     {  
         public Conexion conec= new Conexion();
         
-        public List<Usuarios> Listar()
+        public List<Usuarios> Listar() //listado de todos los usuario
         {
             List<Usuarios> lista = new List<Usuarios>();
             
@@ -51,7 +51,7 @@ namespace CDatos
             return lista;
         }
 
-        public Usuarios BuscarUsuario(string nomUsuario) { 
+        public Usuarios BuscarUsuario(string nomUsuario) { //buscar usuario por nombre de usuario
           Usuarios usu = new Usuarios();
             conec.OpenConnection();
             try

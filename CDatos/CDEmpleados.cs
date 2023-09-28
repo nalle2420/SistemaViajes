@@ -13,7 +13,7 @@ namespace CDatos
     {
         public Conexion conec = new Conexion();
 
-        public Empleados BuscarEmpleado(int id)
+        public Empleados BuscarEmpleado(int id) //busca un empleado segun su id y retorna un objeto tipo empleado
         {
             Empleados emp = new Empleados();
             conec.OpenConnection();
@@ -47,7 +47,7 @@ namespace CDatos
             return emp;
         }
 
-        public int FechaEmpleado(int id)
+        public int FechaEmpleado(int id) // confirma si un empleado ya hizo un viaje ese dia
         {
             int confirmacion = 0;
             conec.OpenConnection();
@@ -78,7 +78,7 @@ namespace CDatos
         }
 
 
-        public List<Empleados> Listar()
+        public List<Empleados> Listar() //obtiene lista de empleados que si utilizan servicio de transporte
         {
             List<Empleados> lista = new List<Empleados>();
 
@@ -118,7 +118,7 @@ namespace CDatos
             return lista;
         }
 
-        public List<Empleados> BuscarEmpleadosxSucursal(int id)
+        public List<Empleados> BuscarEmpleadosxSucursal(int id) //busca empleados afiliados a una sucursal
         {
             List<Empleados> lista = new List<Empleados>();
 

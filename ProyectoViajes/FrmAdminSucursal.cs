@@ -52,7 +52,7 @@ namespace ProyectoViajes
             LlenarEmpleado();
         }
 
-        private void LlenarEmpleado()
+        private void LlenarEmpleado() //llena el combobox con la lista de empleados
         {
             try
             {
@@ -73,7 +73,7 @@ namespace ProyectoViajes
         }
 
 
-            private void LlenarSucursal()
+            private void LlenarSucursal() // llena el combobox con la lista de sucursal no afiliados al empleado seleccionado
         {
             try { 
             Empleados empleadoSeleccionado = (Empleados)cmbColaborador.SelectedItem;
@@ -92,7 +92,7 @@ namespace ProyectoViajes
             }
         }
 
-        private void LlenarDWV()
+        private void LlenarDWV() //llena el data grid view con las sucursales afiliadas al empleado
         {
             Empleados empleadoSeleccionado = (Empleados)cmbColaborador.SelectedItem;
             List<SucursalxEmpleado> sucuxemp = cnsuxemp.BuscarSucursalxEmp(empleadoSeleccionado.Emp_ID);
@@ -129,7 +129,7 @@ namespace ProyectoViajes
         }
 
 
-        private void obtenerValores()
+        private void obtenerValores() //obtiene valores de los text y los combobox
 
         {
            
@@ -138,7 +138,7 @@ namespace ProyectoViajes
             SuxEmp.Distancia_KM = Convert.ToInt32(txtDistancia.Text);
         }
 
-        private void btnGuardar_Click(object sender, EventArgs e)
+        private void btnGuardar_Click(object sender, EventArgs e) //boton que indica que se guardara una relacion paciente x sucursal
         {
             try {
                 if((Convert.ToInt32(cmbColaborador.SelectedValue) > 0) && (Convert.ToInt32(cmbSucursal.SelectedValue) > 0) && (Convert.ToInt32(txtDistancia.Text)<=50) && (Convert.ToInt32(txtDistancia.Text) > 0))
@@ -171,7 +171,7 @@ namespace ProyectoViajes
 
         }
 
-        private void txtDistancia_KeyPress(object sender, KeyPressEventArgs e)
+        private void txtDistancia_KeyPress(object sender, KeyPressEventArgs e) // evento para no permitir ingreso de letras
         {
             if (!char.IsDigit(e.KeyChar) && e.KeyChar != (char)Keys.Back)
             {

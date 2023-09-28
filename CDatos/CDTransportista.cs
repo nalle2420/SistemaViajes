@@ -13,7 +13,7 @@ namespace CDatos
     {
         public Conexion conec = new Conexion();
 
-        public List<Transportistas> Listar()
+        public List<Transportistas> Listar() //lista todos los transportistas
         {
             List<Transportistas> lista = new List<Transportistas>();
 

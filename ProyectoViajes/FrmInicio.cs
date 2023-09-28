@@ -51,7 +51,7 @@ namespace ProyectoViajes
 
         }
 
-        private void FrmInicio_Load(object sender, EventArgs e)
+        private void FrmInicio_Load(object sender, EventArgs e) // obtiene lista de permisos del usuario que ingreso
         {
             
             try
@@ -83,7 +83,7 @@ namespace ProyectoViajes
 
         }
 
-        private void AbrirFormulario(IconMenuItem menu, Form formulario)
+        private void AbrirFormulario(IconMenuItem menu, Form formulario) 
         {
             if(MenuActual != null)
             {
